@@ -12,3 +12,19 @@ if(close){
 		nav.classList.remove('active');
 	})
 }
+
+var modal = document.getElementById("modal");
+
+var closeBtn = document.getElementsByClassName("close")[0];
+
+var overlay = document.getElementById("overlay");
+
+closeBtn.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
